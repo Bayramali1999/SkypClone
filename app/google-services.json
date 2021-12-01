@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952639904167",
+    "project_id": "skypclone-1bbc5",
+    "storage_bucket": "skypclone-1bbc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952639904167:android:b21cc380482d2e203dbe82",
+        "android_client_info": {
+          "package_name": "com.example.skypclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952639904167-qgvl81np8n6eag5bp6pf69nvp7012k9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOjcWidjmnGFdGYFOwB8rH9Zxm4TXGeYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952639904167-qgvl81np8n6eag5bp6pf69nvp7012k9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.skypclone.MainActivity;
+import com.example.skypclone.ContactActivity;
 import com.example.skypclone.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -156,7 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void goToMain() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ContactActivity.class);
         startActivity(intent);
         finish();
     }

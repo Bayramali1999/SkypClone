@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.NotificationActivity">
-
+    tools:context=".activities.FindFriedActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar_layout_noti"
+        android:id="@+id/appbar_layout_findfriend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/notif_toolbar"
+            android:id="@+id/contacts_toolbarfindriemd"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
 
             <RelativeLayout
+                android:id="@+id/findfriend_s"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_notif"
-                    android:layout_width="wrap_content"
+
+                <EditText
+                    android:id="@+id/find_fired_search_text"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="Notification"
+                    android:drawableLeft="@drawable/search"
+                    android:hint="search friends.."
+                    android:textAlignment="center"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -34,14 +37,11 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notification_rv"
-        android:layout_width="wrap_content"
+        android:id="@+id/find_fired_rv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appbar_layout_noti"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appbar_layout_findfriend"
         android:layout_alignParentBottom="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

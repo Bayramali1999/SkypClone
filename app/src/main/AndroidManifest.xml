@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkypClone">
         <activity
+            android:name=".activities.FindFriedActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NotificationActivity"
             android:exported="false" />
         <activity
@@ -27,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ContactActivity"
             android:exported="false"
             android:label="@string/app_name" />
     </application>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="25dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="25dp"
+    android:elevation="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/card_view_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/contact_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image" />
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_image"
+            android:layout_marginTop="5dp"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_200"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/contact_name_accept_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_below="@id/contact_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/purple_200"
+            android:drawableTop="@drawable/video_call"
+            android:drawableTint="@android:color/white"
+            android:paddingTop="8dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

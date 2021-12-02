@@ -3,7 +3,10 @@ package com.example.skypclone;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
+import com.example.skypclone.activities.FindFriedActivity;
 import com.example.skypclone.activities.NotificationActivity;
 import com.example.skypclone.activities.RegisterActivity;
 import com.example.skypclone.activities.SettingActivity;
@@ -11,22 +14,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skypclone.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class ContactActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private BottomNavigationView navView;
 
     private FirebaseAuth mAuth;
-    private FirebaseUser firebaseUser;
+
+    private ImageView findPeopleBtn;
+    private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +41,18 @@ public class MainActivity extends AppCompatActivity {
         navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(listener);
 
+        findPeopleBtn = findViewById(R.id.contacts_toolbar_image);
+        recyclerView = findViewById(R.id.contacts_rv);
         mAuth = FirebaseAuth.getInstance();
-//
-//        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//        NavigationUI.setupWithNavController(binding.navView, navController);
+
+        findPeopleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent settingIntent = new Intent(ContactActivity.this, FindFriedActivity.class);
+                startActivity(settingIntent);
+
+            }
+        });
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener listener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -53,21 +60,21 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_setting:
-                    Intent settingIntent = new Intent(MainActivity.this, SettingActivity.class);
+                    Intent settingIntent = new Intent(ContactActivity.this, SettingActivity.class);
                     startActivity(settingIntent);
                     break;
                 case R.id.navigation_home:
-                    Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
+                    Intent homeIntent = new Intent(ContactActivity.this, ContactActivity.class);
                     startActivity(homeIntent);
                     break;
                 case R.id.navigation_notifications:
-                    Intent nIntent = new Intent(MainActivity.this, NotificationActivity.class);
+                    Intent nIntent = new Intent(ContactActivity.this, NotificationActivity.class);
                     startActivity(nIntent);
                     break;
 
                 case R.id.navigation_logout:
                     mAuth.signOut();
-                    Intent rIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                    Intent rIntent = new Intent(ContactActivity.this, RegisterActivity.class);
                     startActivity(rIntent);
                     finish();
                     break;

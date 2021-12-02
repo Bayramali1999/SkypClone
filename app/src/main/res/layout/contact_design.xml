@@ -46,7 +46,8 @@
             android:drawableTint="@android:color/white"
             android:paddingTop="8dp"
             android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

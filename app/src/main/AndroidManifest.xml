@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkypClone">
         <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.FindFriedActivity"
             android:exported="false" />
         <activity

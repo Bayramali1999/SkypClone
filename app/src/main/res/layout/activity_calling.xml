@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CallingActivity">
+
+    <ImageView
+        android:id="@+id/calling_receiver_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_image" />
+
+    <TextView
+        android:id="@+id/calling_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/calling_call_name"
+        android:text="User name"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/calling_call_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/calling_btn_view"
+        android:text="Calling...."
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/calling_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/make_call"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/make_call"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/cancel_call"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cancel_call" />
+
+    </LinearLayout>
+</RelativeLayout>
